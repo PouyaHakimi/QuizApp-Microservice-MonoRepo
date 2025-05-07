@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/Microservices.iml" filepath="$PROJECT_DIR$/.idea/Microservices.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Quiz-Service-Microservices/Microservices-Quiz-Service.iml" filepath="$PROJECT_DIR$/Quiz-Service-Microservices/Microservices-Quiz-Service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Question-Service-Microservices/Question-Service-Microservices.iml" filepath="$PROJECT_DIR$/Question-Service-Microservices/Question-Service-Microservices.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Service-Registry-Eurika-Server/Service-Registry-Eurika-Server.iml" filepath="$PROJECT_DIR$/Service-Registry-Eurika-Server/Service-Registry-Eurika-Server.iml" />
+    </modules>
+  </component>
+</project>

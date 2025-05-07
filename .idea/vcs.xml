@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="VcsDirectoryMappings">
+    <mapping directory="$PROJECT_DIR$" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Question-Service-Microservices" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Quiz-Service-Microservices" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Service-Registry-Eurika-Server" vcs="Git" />
+  </component>
+</project>
