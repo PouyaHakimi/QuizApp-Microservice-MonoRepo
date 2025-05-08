@@ -1,0 +1,42 @@
+version: "3.8"
+
+services:
+  quiz-services:
+    build:
+      context: ./Quiz-Service-Microservices
+      dockerfile: Dockerfile
+    image: pouya/quiz-service:v1
+    ports:
+      - "8090:8090"
+    networks:
+      - microservices-network
+
+  eureka-server:
+    build:
+      context: ./Service-Registry-Eurika-Server
+      dockerfile: Dockerfile
+    image: pouya/eureka-server:v1
+    ports:
+      - "8761:8761"
+    networks:
+      - microservices-network
+
+
+  postgres:
+    image: postgres:latest
+    environment:
+      POSTGRES_USERNAME: postgres
+      POSTGRES_PASSWORD: NI0neTeam
+      POSTGRES_DB: quizdb
+    ports:
+      - "5433:5432"  # host:container
+    networks:
+      - microservices-network
+    volumes:
+      - postgres-quizApp-data:/var/lib/postgresql/data
+
+networks:
+  microservices-network:
+    driver: bridge
+volumes:
+  postgres-quizApp-data:

@@ -29,4 +29,9 @@ public class QuizController {
         return quizService.QuizResult(id,response);
     }
 
+    @GetMapping("test")
+    public String test(){
+        return "docker is working";
+    }
+
 }

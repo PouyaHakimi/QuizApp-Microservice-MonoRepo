@@ -1,0 +1,15 @@
+# Global
+*.iml
+.idea/
+target/
+*.log
+
+# Java/Maven
+*.class
+*.jar
+
+# OS
+.DS_Store
+
+# Others
+logs/
