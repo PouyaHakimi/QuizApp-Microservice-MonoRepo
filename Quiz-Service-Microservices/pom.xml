@@ -79,7 +79,7 @@
 	</dependencyManagement>
 
 	<build>
-		<finalName>quizService-jar</finalName>
+		<finalName>quiz-Service</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>

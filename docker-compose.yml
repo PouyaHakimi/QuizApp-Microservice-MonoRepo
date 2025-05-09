@@ -11,6 +11,28 @@ services:
     networks:
       - microservices-network
 
+  question-services:
+    build:
+      context: ./Question-Service-Microservices
+      dockerfile: Dockerfile
+    image: pouya/question-service:v1
+    ports:
+      - "8080:8080"
+    networks:
+      - microservices-network
+
+
+  question-services2:
+    image: pouya/question-service:v1
+    ports:
+      - "8081:8081"
+    environment:
+      - SERVER_PORT=8081
+    networks:
+      - microservices-network
+
+
+
   eureka-server:
     build:
       context: ./Service-Registry-Eurika-Server
@@ -24,6 +46,7 @@ services:
 
   postgres:
     image: postgres:latest
+    container_name: quizDB
     environment:
       POSTGRES_USERNAME: postgres
       POSTGRES_PASSWORD: NI0neTeam
@@ -35,8 +58,23 @@ services:
     volumes:
       - postgres-quizApp-data:/var/lib/postgresql/data
 
+  postgresquestion:
+    image: postgres:latest
+    container_name: questionDB
+    environment:
+      POSTGRES_USERNAME: postgres
+      POSTGRES_PASSWORD: NI0neTeam
+      POSTGRES_DB: questiondb
+    ports:
+      - "5434:5432"  # host:container
+    networks:
+      - microservices-network
+    volumes:
+      - postgres-questionApp-data:/var/lib/postgresql/data
+
 networks:
   microservices-network:
     driver: bridge
 volumes:
   postgres-quizApp-data:
+  postgres-questionApp-data:
